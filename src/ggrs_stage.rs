@@ -7,12 +7,12 @@ use instant::{Duration, Instant};
 
 #[derive(Resource)]
 /// The GGRSStage handles updating, saving and loading the game state.
-pub(crate) struct GGRSStage<T>
+pub struct GGRSStage<T>
 where
     T: Config,
 {
     /// Used to register all types considered when loading and saving
-    pub(crate) type_registry: TypeRegistry,
+    pub type_registry: TypeRegistry,
     /// This system is used to get an encoded representation of the input that GGRS can handle
     pub(crate) input_system: Box<dyn System<In = PlayerHandle, Out = T::Input>>,
     /// Instead of using GGRS's internal storage for encoded save states, we save the world here, avoiding serialization into `Vec<u8>`.
