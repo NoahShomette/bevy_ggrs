@@ -15,7 +15,7 @@ pub use ggrs;
 
 pub use rollback::{AddRollbackCommandExtension, AddRollbackCommand, Rollback};
 
-pub(crate) mod ggrs_stage;
+pub mod ggrs_stage;
 pub(crate) mod world_snapshot;
 pub(crate) mod rollback;
 
